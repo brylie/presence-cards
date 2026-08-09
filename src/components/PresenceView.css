@@ -1,0 +1,111 @@
+.presence-view {
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.presence-view__navigation {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.presence-view__back,
+.presence-view__checkin {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0 0.25rem;
+  background: none;
+  border: none;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.presence-view__checkin {
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+}
+
+.presence-view__pulse {
+  position: absolute;
+  top: 5.5rem;
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  animation: pulse 4.5s ease-in-out infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+}
+
+.presence-view .card-face {
+  position: relative;
+  z-index: 1;
+}
+
+.presence-view__cue {
+  margin-top: 1.5rem;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  max-width: 24rem;
+}
+
+.presence-view__actions {
+  margin-top: 1.25rem;
+}
+
+.presence-view__draw {
+  background: none;
+  border: 1.5px solid var(--accent);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 0 1.3rem;
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.presence-view__draw:hover {
+  background: var(--accent);
+  color: var(--paper-raised);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .presence-view__pulse {
+    animation: none;
+    opacity: 0.25;
+  }
+}
