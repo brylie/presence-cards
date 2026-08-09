@@ -90,9 +90,9 @@ describe("navigation", () => {
     await user.click(screen.getByRole("button", { name: /Anxiety/ }));
     await user.click(screen.getByRole("button", { name: "Draw a card for me" }));
 
+    const heading = screen.getByRole("heading", { level: 1 });
     expect(screen.getByRole("button", { name: "Draw another card from this deck" })).toBeInTheDocument();
-    expect(statusText()).not.toBe("");
-    expect(statusText()).not.toBe("Anxiety deck");
+    expect(statusText()).toBe(heading.textContent);
   });
 
   it("lets you pick a card directly instead of drawing at random", async () => {
