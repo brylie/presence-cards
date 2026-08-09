@@ -1,0 +1,60 @@
+.intro {
+  max-width: 32rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 2.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro__ring {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  border: 0.55rem solid var(--accent);
+  margin-bottom: 1.25rem;
+}
+
+.intro h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.9rem;
+  color: var(--ink);
+  margin: 0 0 1.25rem;
+  border-radius: 6px;
+}
+
+.intro p {
+  font-size: 0.96rem;
+  line-height: 1.6;
+  color: var(--ink);
+  margin: 0 0 1rem;
+  text-align: left;
+}
+
+.intro__continue {
+  margin-top: 0.75rem;
+  background: var(--accent);
+  color: var(--paper-raised);
+  border: none;
+  border-radius: 999px;
+  padding: 0.75rem 1.8rem;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.92rem;
+  cursor: pointer;
+  min-height: 2.75rem;
+}
+
+.intro__continue:hover {
+  background: var(--accent-dark);
+}
+
+.intro__disclaimer {
+  margin-top: 1.5rem;
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  text-align: center;
+}
