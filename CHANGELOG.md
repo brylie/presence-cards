@@ -29,6 +29,14 @@ entries are grouped under `Unreleased` until a first tagged release.
   `LICENSE-CONTENT.md` and `NOTICE` (CC BY-SA 4.0 for original card text
   and research write-ups), `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`,
   `SECURITY.md`.
+- Test suite (Vitest + React Testing Library, 53 tests) covering the
+  screen-navigation state machine, focus management, the no-repeat draw
+  rule, and every component's conditional rendering — 96% statement / 91%
+  branch coverage, enforced at an 80% floor in CI.
+- `.github/workflows/ci.yml` — lint, build, and test-with-coverage as
+  parallel jobs on every push to `main` and every pull request.
+- `.github/workflows/deploy.yml` — publishes `dist/` to GitHub Pages once
+  CI passes on `main`.
 
 ### Removed
 

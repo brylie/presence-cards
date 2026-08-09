@@ -1,5 +1,7 @@
 # Presence Cards
 
+**[Live app: brylie.github.io/presence-cards](https://brylie.github.io/presence-cards/)**
+
 Presence Cards is a quiet companion for meeting a human experience with
 attention. It is not a mood tracker, clinical tool, or game to win. Choose an
 experience, draw or deliberately select a card, and take the small invitation
@@ -22,6 +24,21 @@ To check the production bundle:
 ```bash
 npm run build
 ```
+
+To run tests with a coverage report (CI requires ≥80%):
+
+```bash
+npm run test:coverage
+```
+
+## Continuous integration and deployment
+
+`.github/workflows/ci.yml` runs lint, build, and test-with-coverage as
+three parallel jobs on every push to `main` and every pull request.
+`.github/workflows/deploy.yml` triggers when CI finishes successfully on
+`main` and publishes `dist/` to GitHub Pages — deployment is gated on CI
+passing, not a separate check. See [`CONTRIBUTING.md`](CONTRIBUTING.md)
+for the full local dev/test loop.
 
 ## MVP behavior
 

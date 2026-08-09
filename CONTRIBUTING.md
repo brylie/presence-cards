@@ -17,13 +17,20 @@ agree on fit before writing than to revert afterward.
 
 ```bash
 npm install
-npm run dev      # local dev server
-npm run build    # tsc -b && vite build — must pass before a PR is opened
-npm run lint      # oxlint, then eslint
+npm run dev            # local dev server
+npm run build          # tsc -b && vite build — must pass before a PR is opened
+npm run lint            # oxlint, then eslint
+npm run test            # vitest, once
+npm run test:watch      # vitest, watch mode
+npm run test:coverage   # vitest with a coverage report — CI requires ≥80%
 ```
 
-There's no test suite yet. If you add non-trivial logic (not just card
-data), lightweight tests are welcome.
+Tests live next to what they test (`Component.test.tsx`) and use Vitest +
+React Testing Library. CI enforces a repo-wide coverage floor of 80% across
+statements, branches, functions, and lines — `npm run test:coverage` fails
+locally the same way it would in CI, so run it before opening a PR that
+adds meaningful logic. Prefer testing behavior a user or screen reader
+would notice (roles, accessible names, focus) over implementation detail.
 
 ## Kinds of contribution
 
@@ -73,12 +80,22 @@ remain public domain and aren't affected by this.
 
 - Keep PRs scoped to one change — one deck, one bug, one design fix — so
   review stays focused.
-- Run `npm run build` and `npm run lint` locally before opening the PR;
-  both must pass.
+- Run `npm run build`, `npm run lint`, and `npm run test:coverage` locally
+  before opening the PR; all three run in CI and must pass, including the
+  80% coverage floor.
 - For UI changes, say in the PR description how you checked it: which
   screens, keyboard-only pass, light/dark, `prefers-reduced-motion`.
 - Describe *why*, not just what — especially for anything touching tone,
   copy, or a rule in `PRD.md`.
+
+## Continuous integration and deployment
+
+Every push to `main` and every pull request runs `.github/workflows/ci.yml`
+(lint, build, and test-with-coverage as three parallel jobs). Once CI
+passes on `main`, `.github/workflows/deploy.yml` builds and publishes
+`dist/` to GitHub Pages automatically — it's triggered by CI's completion,
+not a separate quality gate, so it never deploys something CI hasn't
+already validated.
 
 ## Code of Conduct
 
