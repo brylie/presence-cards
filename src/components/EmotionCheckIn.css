@@ -111,3 +111,13 @@
   text-underline-offset: 2px;
   cursor: pointer;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .check-in__button {
+    transition: none;
+  }
+
+  .check-in__button:hover {
+    transform: none;
+  }
+}
