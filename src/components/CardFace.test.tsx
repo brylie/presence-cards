@@ -49,7 +49,9 @@ const quotationWithoutHomepage: PracticeCard = {
   },
 };
 
-const quotationWithoutSource: PracticeCard = {
+// Deliberately violates the QuotationCard type: CardFace still renders a
+// fallback for malformed data at runtime, so this exercises that path.
+const quotationWithoutSource = {
   id: "test-quotation-no-source",
   deck: "anger",
   title: "Untitled Quote",
@@ -57,7 +59,7 @@ const quotationWithoutSource: PracticeCard = {
   quote: "A quote with no recorded source.",
   contentKind: "quotation",
   authorId: "unknown-author-id",
-};
+} as unknown as PracticeCard;
 
 describe("CardFace compact variant", () => {
   it("renders the title as plain text, not a heading", () => {

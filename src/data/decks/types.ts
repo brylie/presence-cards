@@ -18,21 +18,30 @@ export type DeckId =
   | "boundaries"
   | "joy-and-delight";
 
-export interface PracticeCard {
+interface PracticeCardBase {
   id: string;
   deck: DeckId;
   title: string;
   practice: string;
   /** The complete, self-contained invitation or exact verified quotation. */
   quote: string;
-  contentKind: ContentKind;
   authorId: string;
   resourceId?: string;
   /** Further reading for an original Presence Cards practice. */
   inspirationResourceId?: string;
-  /** Required provenance for every exact quotation. */
-  source?: QuotationSource;
 }
+
+export interface OriginalPracticeCard extends PracticeCardBase {
+  contentKind: "original-practice";
+}
+
+export interface QuotationCard extends PracticeCardBase {
+  contentKind: "quotation";
+  /** Required provenance for every exact quotation, per research/sources.md. */
+  source: QuotationSource;
+}
+
+export type PracticeCard = OriginalPracticeCard | QuotationCard;
 
 export interface QuotationSource {
   work: string;

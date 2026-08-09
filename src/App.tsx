@@ -31,7 +31,8 @@ function markIntroSeen() {
   }
 }
 
-function pickRandomCard(cards: PracticeCard[], excludeId?: string): PracticeCard {
+function pickRandomCard(cards: PracticeCard[], excludeId?: string): PracticeCard | null {
+  if (cards.length === 0) return null;
   const pool = excludeId && cards.length > 1 ? cards.filter((card) => card.id !== excludeId) : cards;
   return pool[Math.floor(Math.random() * pool.length)];
 }
@@ -102,7 +103,8 @@ function App() {
           deck={activeDeck}
           onPick={(card) => setScreen({ name: "presence", card })}
           onDrawRandom={() => {
-            setScreen({ name: "presence", card: pickRandomCard(activeDeck.cards) });
+            const card = pickRandomCard(activeDeck.cards);
+            if (card) setScreen({ name: "presence", card });
           }}
           onBack={() => setScreen({ name: "checkin" })}
         />
@@ -117,7 +119,7 @@ function App() {
           onDrawAnother={() => {
             if (!deckForCard) return;
             const card = pickRandomCard(deckForCard.cards, screen.card.id);
-            setScreen({ name: "presence", card });
+            if (card) setScreen({ name: "presence", card });
           }}
           onBackToDeck={() => setScreen({ name: "deck", emotion: screen.card.deck })}
           onBackToCheckIn={() => setScreen({ name: "checkin" })}
