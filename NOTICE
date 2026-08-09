@@ -1,0 +1,28 @@
+Presence Cards
+Copyright 2026 Presence Cards contributors
+
+This product includes software licensed under the Apache License,
+Version 2.0. See the LICENSE file for the full text.
+
+License scope
+--------------
+This repository contains two kinds of copyrightable material under two
+different licenses. See LICENSE-CONTENT.md for the full explanation.
+
+- Code (everything under src/ except the card text described below, and
+  all project configuration) — Apache License, Version 2.0. See LICENSE.
+- Original practice-card text (the title, practice, and quote fields of
+  cards with contentKind "original-practice" in src/data/decks/*.ts) and
+  the editorial research write-ups in research/*.md — Creative Commons
+  Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). See
+  LICENSE-CONTENT.md.
+
+Third-party public-domain material
+-----------------------------------
+A small number of cards (contentKind "quotation") carry exact quotations
+already in the public domain, sourced from public-domain editions
+identified in research/sources.md (largely Project Gutenberg texts). These
+quotations are not covered by either license above: they are reproduced
+as public-domain material with full attribution (author, work, edition or
+translator, and location) on each card. Public-domain status can vary by
+jurisdiction; verify it for your distribution territory before reuse.
