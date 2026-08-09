@@ -13,12 +13,9 @@ worth reporting.
 
 Please **do not** open a public GitHub issue for a security report.
 
-Instead, report it privately:
-
-- Preferred: use GitHub's [private vulnerability reporting](https://github.com/brylie/presence-cards/security/advisories/new)
-  for this repository (Security tab → "Report a vulnerability").
-- Alternative: **[MAINTAINER_CONTACT — replace with a monitored email
-  before publishing this repository]**.
+Instead, report it privately using GitHub's
+[private vulnerability reporting](https://github.com/brylie/presence-cards/security/advisories/new)
+for this repository (Security tab → "Report a vulnerability").
 
 Please include:
 

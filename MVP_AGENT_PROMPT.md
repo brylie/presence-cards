@@ -11,9 +11,9 @@ attention. It is not a mood tracker, game to win, clinical tool, or source of
 diagnosis. A person names what is present, chooses or draws a card, and is
 offered a small, self-contained invitation.
 
-The cards use game-inspired visual language (decks, rarity, card art), but
-the experience must not use scores, streaks, mastery mechanics, pressure, or
-compulsive “card hopping.”
+The cards use game-inspired visual language (decks and card art), but the
+experience must not use scores, streaks, rarity, mastery mechanics, pressure,
+or compulsive “card hopping.”
 
 The primary content is **original Presence Cards practice text**. Carefully
 sourced public-domain quotations are occasional, clearly attributed guests.
@@ -39,7 +39,8 @@ Deliver a usable local app where a person can:
 
 1. Choose one of the current experience decks:
    Uncertainty, Anxiety, Anger, Sadness, Fear, Waiting, Loss, Change,
-   Enoughness, Beginning Again, or Rest.
+   Enoughness, Beginning Again, Rest, Belonging, Overwhelm, Boundaries, or
+   Joy and Delight.
 2. See a real, non-placeholder deck with a modest but meaningful selection of
    cards (target 5–8 cards per deck for this MVP, rather than forcing 52).
 3. Draw one card or deliberately select one from the deck.
@@ -127,7 +128,7 @@ slice over a huge content import.
 
 The work is complete when:
 
-- All 11 experience decks are selectable and contain real cards.
+- All 15 experience decks are selectable and contain real cards.
 - Each deck has an optional, working Explore further resource list.
 - Cards cleanly distinguish original practices from sourced quotations.
 - Source metadata and external links render correctly.

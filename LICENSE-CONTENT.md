@@ -3,13 +3,15 @@
 This repository uses two licenses for two different kinds of material. See
 [`NOTICE`](NOTICE) for the full breakdown; the summary is:
 
-- **Code** (everything under `src/` except the card text described below,
-  plus config files) is licensed under the **Apache License, Version 2.0**.
-  See [`LICENSE`](LICENSE).
+- **Code** (everything under `src/` except the card text described below),
+  config files, and **project documentation** (`README.md`, `PRD.md`,
+  `CONTRIBUTING.md`, `CHANGELOG.md`, `MVP_AGENT_PROMPT.md`, and the
+  `.github/` issue and pull request templates) are licensed under the
+  **Apache License, Version 2.0**. See [`LICENSE`](LICENSE).
 - **Original written content** — the practice-card text (`title`,
   `practice`, and `quote` fields where `contentKind` is
   `"original-practice"` in `src/data/decks/*.ts`) and the editorial write-ups
-  in `research/*.md` — is licensed under **Creative Commons
+  under `research/` — is licensed under **Creative Commons
   Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)**.
 - **Public-domain quotations** (cards where `contentKind` is `"quotation"`,
   with a `source` object) are exactly that: text already in the public

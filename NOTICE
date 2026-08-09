@@ -9,11 +9,14 @@ License scope
 This repository contains two kinds of copyrightable material under two
 different licenses. See LICENSE-CONTENT.md for the full explanation.
 
-- Code (everything under src/ except the card text described below, and
-  all project configuration) — Apache License, Version 2.0. See LICENSE.
+- Code (everything under src/ except the card text described below), all
+  project configuration, and project documentation (README.md, PRD.md,
+  CONTRIBUTING.md, CHANGELOG.md, MVP_AGENT_PROMPT.md, and the .github/
+  issue and pull request templates) — Apache License, Version 2.0. See
+  LICENSE.
 - Original practice-card text (the title, practice, and quote fields of
   cards with contentKind "original-practice" in src/data/decks/*.ts) and
-  the editorial research write-ups in research/*.md — Creative Commons
+  the editorial research write-ups under research/ — Creative Commons
   Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). See
   LICENSE-CONTENT.md.
 
